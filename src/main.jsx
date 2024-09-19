@@ -23,7 +23,8 @@ const routes = createBrowserRouter(
       <Route path="user/:userId" element={<User />} />
       <Route path="github" element={<Github />} />
     </Route>
-  )
+  ),
+  { basename: "/router-tutorial/" }
 );
 
 createRoot(document.getElementById("root")).render(
