@@ -12,7 +12,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import User from "./components/User";
-import Github, { githubInfoLoader } from "./components/Github";
+import Github from "./components/Github";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +21,7 @@ const routes = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="user/:userId" element={<User />} />
-      <Route path="github" element={<Github />} loader={githubInfoLoader} />
+      <Route path="github" element={<Github />} />
     </Route>
   )
 );
@@ -31,4 +31,3 @@ createRoot(document.getElementById("root")).render(
     <RouterProvider router={routes} />
   </StrictMode>
 );
-
